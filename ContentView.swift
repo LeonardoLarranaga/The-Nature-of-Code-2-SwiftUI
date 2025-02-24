@@ -6,6 +6,7 @@ struct ContentView: View {
             Form {
                 Section("Chapter 0: Randomness") {
                     NavigationLink("0.1 - A Traditional Random Walk", destination: TraditionalRandomWalk())
+                    NavigationLink("0.2 - A Random-Number Distribution", destination: RandomNumberDistribution())
                 }
             }
             .formStyle(.grouped)
