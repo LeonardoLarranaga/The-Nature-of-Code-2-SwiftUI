@@ -40,7 +40,7 @@ struct WalkerTendsMoveRight: View {
         Canvas { context, size in
             for pos in positions {
                 let rect = CGRect(x: pos.x, y: pos.y, width: 2, height: 2)
-                context.fill(Path(rect), with: .color(.black))
+                context.fill(Path(rect), with: .color(.primary))
             }
         }
         .onAppear {

@@ -17,7 +17,7 @@ struct GaussianDistribution: View {
         Canvas { context, size in
             for x in circlesX {
                 let circle = Path(ellipseIn: CGRect(x: x, y: Int(size.height) / 2, width: 25, height: 25))
-                context.fill(circle, with: .color(.black.opacity(0.3)))
+                context.fill(circle, with: .color(.primary.opacity(0.3)))
             }
         }
         .onAppear {

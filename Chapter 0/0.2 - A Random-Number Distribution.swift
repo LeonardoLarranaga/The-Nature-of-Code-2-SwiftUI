@@ -19,7 +19,7 @@ struct RandomNumberDistribution: View {
                 let x = CGFloat(index) * barWidth
                 let y = size.height - CGFloat(count)
                 let rect = CGRect(x: x, y: y, width: 25, height: CGFloat(count))
-                context.fill(Path(rect), with: .color(.black))
+                context.fill(Path(rect), with: .color(.primary))
                 context.stroke(Path(rect), with: .color(.gray), lineWidth: 3)
             }
         }
