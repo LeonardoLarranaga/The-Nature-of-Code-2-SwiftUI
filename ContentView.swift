@@ -10,6 +10,7 @@ struct ContentView: View {
                     NavigationLink("0.3 - A Walker That Tends to Move to the Right", destination: WalkerTendsMoveRight())
                     NavigationLink("0.4 - A Gaussian Distribution", destination: GaussianDistribution())
                     NavigationLink("0.5 - An Accept-Reject Distribution", destination: AcceptRejectDistribution())
+                    NavigationLink("0.6 - A Perlin Noise Walker", destination: PerlinNoiseWalker())
                 }
             }
             .formStyle(.grouped)
