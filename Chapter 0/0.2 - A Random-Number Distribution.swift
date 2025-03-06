@@ -9,12 +9,16 @@ import SwiftUI
 
 struct RandomNumberDistribution: View {
     
+    // An array to keep track of how often random numbers are picked.
     @State var randomCounts = Array(repeating: 0, count: 20)
+    // The total number of counts.
+    var total: Int { randomCounts.count }
     @State var timer: Timer?
     
     var body: some View {
         Canvas { context, size in
             let barWidth = size.width / CGFloat(randomCounts.count)
+            // Graph the results.
             for (index, count) in randomCounts.enumerated() {
                 let x = CGFloat(index) * barWidth
                 let y = size.height - CGFloat(count)
@@ -25,10 +29,9 @@ struct RandomNumberDistribution: View {
         }
         .onAppear {
             timer = Timer.scheduledTimer(withTimeInterval: 1/120, repeats: true) { _ in
-                DispatchQueue.main.async {
-                    let index = Int.random(in: 0..<randomCounts.count)
-                    randomCounts[index] += 1
-                }
+                // Pick a random number and increase the count.
+                let index = Int.random(in: 0..<total)
+                randomCounts[index] += 1
             }
         }
         .onDisappear(perform: timer?.invalidate)

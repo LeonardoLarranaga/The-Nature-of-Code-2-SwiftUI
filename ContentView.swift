@@ -12,6 +12,10 @@ struct ContentView: View {
                     NavigationLink("0.5 - An Accept-Reject Distribution", destination: AcceptRejectDistribution())
                     NavigationLink("0.6 - A Perlin Noise Walker", destination: PerlinNoiseWalker())
                 }
+                
+                Section("Chapter 1: Vectors") {
+                    NavigationLink("1.1 - Bouncing Ball with No Vectors", destination: BouncingBallWithNoVectors())
+                }
             }
             .formStyle(.grouped)
             .navigationTitle("Nature of Code")

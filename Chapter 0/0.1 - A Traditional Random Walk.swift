@@ -19,6 +19,7 @@ struct TraditionalRandomWalk: View {
         }
         
         func step() {
+            // 0, 1, 2, or 3. The random choice determines the step.
             let choice = Int.random(in: 0...3)
             switch choice {
             case 0:
@@ -45,11 +46,11 @@ struct TraditionalRandomWalk: View {
             }
         }
         .onAppear {
+            // The timer loops forever and ever (until you close the app or change example).
             timer = Timer.scheduledTimer(withTimeInterval: 1/120, repeats: true) { _ in
-                DispatchQueue.main.async {
-                    walker.step()
-                    positions.append(CGPoint(x: walker.x, y: walker.y))
-                }
+                // Call functions on the walker.
+                walker.step()
+                positions.append(CGPoint(x: walker.x, y: walker.y))
             }
         }
         .onDisappear(perform: timer?.invalidate)

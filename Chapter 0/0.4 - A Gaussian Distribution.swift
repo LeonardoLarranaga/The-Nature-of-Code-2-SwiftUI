@@ -22,10 +22,9 @@ struct GaussianDistribution: View {
         }
         .onAppear {
             timer = Timer.scheduledTimer(withTimeInterval: 1/30, repeats: true) { _ in
-                DispatchQueue.main.async {
-                    let random = GKGaussianDistribution(randomSource: GKRandomSource(), mean: 320, deviation: 60)
-                    circlesX.append(random.nextInt())
-                }
+                // A normal distribution with mean of 320 and standard deviation of 60.
+                let random = GKGaussianDistribution(randomSource: GKRandomSource(), mean: 320, deviation: 60)
+                circlesX.append(random.nextInt())
             }
         }
         .onDisappear(perform: timer?.invalidate)

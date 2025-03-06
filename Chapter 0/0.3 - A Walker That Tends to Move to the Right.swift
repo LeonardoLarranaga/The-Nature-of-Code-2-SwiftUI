@@ -20,6 +20,7 @@ struct WalkerTendsMoveRight: View {
         
         func step() {
             let r = Double.random(in: 0...1)
+            // A 40% chance of moving to the right.
             if r < 0.4 {
                 x += 1
             } else if r < 0.6 {
@@ -45,10 +46,8 @@ struct WalkerTendsMoveRight: View {
         }
         .onAppear {
             timer = Timer.scheduledTimer(withTimeInterval: 1/120, repeats: true) { _ in
-                DispatchQueue.main.async {
-                    walker.step()
-                    positions.append(CGPoint(x: walker.x, y: walker.y))
-                }
+                walker.step()
+                positions.append(CGPoint(x: walker.x, y: walker.y))
             }
         }
         .onDisappear(perform: timer?.invalidate)

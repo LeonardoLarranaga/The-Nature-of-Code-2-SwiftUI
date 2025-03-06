@@ -25,10 +25,8 @@ struct AcceptRejectDistribution: View {
         }
         .onAppear {
             timer = Timer.scheduledTimer(withTimeInterval: 1/120, repeats: true) { _ in
-                DispatchQueue.main.async {
-                    let random = Int(acceptReject() * Double(randomCounts.count))
-                    randomCounts[random] += 1
-                }
+                let random = Int(acceptReject() * Double(randomCounts.count))
+                randomCounts[random] += 1
             }
         }
         .onDisappear(perform: timer?.invalidate)
@@ -36,10 +34,15 @@ struct AcceptRejectDistribution: View {
     }
     
     func acceptReject() -> Double {
+        // Do this "forever" until you find a qualifying random value.
         while true {
+            // Pick a random value.
             let r1 = Double.random(in: 0...1)
-            let probability = r1 * r1
+            // Assign a probability.
+            let probability = r1
+            // Pick a second random value.
             let r2 = Double.random(in: 0...1)
+            // Does it qualify? If so, you're done!
             if r2 < probability {
                 return r1
             }
