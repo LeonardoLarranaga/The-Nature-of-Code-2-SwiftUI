@@ -19,6 +19,7 @@ struct ContentView: View {
                     NavigationLink("1.3 - Vector Subtraction", destination: VectorSubtraction())
                     NavigationLink("1.4 - Multiplying a Vector", destination: MultiplyingAVector())
                     NavigationLink("1.5 - Vector Magnitude", destination: VectorMagnitude())
+                    NavigationLink("1.6 - Normalizing a Vector", destination: NormalizingAVector())
                 }
             }
             .formStyle(.grouped)
