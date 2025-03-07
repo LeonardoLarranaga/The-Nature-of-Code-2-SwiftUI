@@ -17,6 +17,7 @@ struct ContentView: View {
                     NavigationLink("1.1 - Bouncing Ball with No Vectors", destination: BouncingBallWithNoVectors())
                     NavigationLink("1.2 - Bouncing Ball with Vectors!", destination: BouncingBallWithVectors())
                     NavigationLink("1.3 - Vector Subtraction", destination: VectorSubtraction())
+                    NavigationLink("1.4 - Multiplying a Vector", destination: MultiplyingAVector())
                 }
             }
             .formStyle(.grouped)

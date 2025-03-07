@@ -15,7 +15,7 @@ struct VectorSubtraction: View {
     
     var body: some View {
         VStack {
-            Text("Drag to simulate the mouse position.")
+            Text("Drag to simulate the mouse location.")
                 .foregroundStyle(.secondary)
             
             Canvas { context, size in
