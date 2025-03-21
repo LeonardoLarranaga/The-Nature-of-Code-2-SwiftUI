@@ -14,11 +14,18 @@ extension SIMD2 where Scalar == Double {
         CGPoint(x: self.x, y: self.y)
     }
     
+    /// Limits the magnitude of the vector to a maximum value.
     mutating func limit(to max: Double) {
         if length(self) > max {
             self = normalize(self)
             self *= max
         }
+    }
+    
+    /// Returns a unit vector pointing in a random direction.
+    static func normalizedRandom() -> SIMD2<Double> {
+        let angle = Double.random(in: 0...(2 * .pi))
+        return SIMD2(x: cos(angle), y: sin(angle))
     }
 }
 
