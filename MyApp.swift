@@ -2,15 +2,21 @@ import SwiftUI
 
 @main
 struct MyApp: App {
-    init() { UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true }
+    
+    init() {
+        // Adjusts the font size of the title to fit.
+        UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-            #if targetEnvironment(macCatalyst)
                 .onAppear {
-                    (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.windowScene?.titlebar?.titleVisibility = .hidden
+                    // On macOS, the title bar is hidden.
+                    #if targetEnvironment(macCatalyst)
+                        (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.windowScene?.titlebar?.titleVisibility = .hidden
+                    #endif
                 }
-            #endif
         }
     }
 }
