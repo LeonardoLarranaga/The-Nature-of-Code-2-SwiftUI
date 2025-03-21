@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/LeonardoLarranaga/The-Nature-of-Code-2-SwiftUI/refs/heads/main/Assets.xcassets/AppIcon.appiconset/cover.png" height="110" style="border-radius:12px">
+  <img src="https://raw.githubusercontent.com/LeonardoLarranaga/The-Nature-of-Code-2-SwiftUI/70b7ab7e38795c3e676f69ec02ef93c900cccbc0/.swiftpm/playgrounds/DocumentThumbnail.png" height="256">
 </p>
 
 # The Nature of Code (2024 Edition): Swift & SwiftUI Port
