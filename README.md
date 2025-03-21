@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/LeonardoLarranaga/The-Nature-of-Code-2-SwiftUI/refs/heads/main/Assets.xcassets/AppIcon.appiconset/cover.png" height="110" style="border-radius:12px">
+</p>
+
 # The Nature of Code (2024 Edition): Swift & SwiftUI Port
 This repository contains a work-in-progress port of the examples from the book by Daniel Shiffman from p5.js to Swift, using the SwiftUI framework.
 
