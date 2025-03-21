@@ -6,11 +6,19 @@
 //
 
 import Foundation
+import simd
 
 extension SIMD2 where Scalar == Double {
     /// Creates a CGPoint from a SIMD2<Double>.
     var point: CGPoint {
         CGPoint(x: self.x, y: self.y)
+    }
+    
+    mutating func limit(to max: Double) {
+        if length(self) > max {
+            self = normalize(self)
+            self *= max
+        }
     }
 }
 
