@@ -20,8 +20,9 @@ struct ContentView: View {
                     NavigationLink("1.4 - Multiplying a Vector", destination: MultiplyingAVector())
                     NavigationLink("1.5 - Vector Magnitude", destination: VectorMagnitude())
                     NavigationLink("1.6 - Normalizing a Vector", destination: NormalizingAVector())
-                    NavigationLink("1.7 - Motion 101 (Velocity", destination: Motion101Velocity())
+                    NavigationLink("1.7 - Motion 101 (Velocity)", destination: Motion101Velocity())
                     NavigationLink("1.8 - Motion 101 (Velocity and Constant Acceleration)", destination: Motion101VelocityConstantAcceleration())
+                    NavigationLink("1.9 - Motion 101 (Velocity and Random Acceleration)", destination: Motion101VelocityRandomAcceleration())
                 }
             }
             .formStyle(.grouped)
